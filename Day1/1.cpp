@@ -33,7 +33,6 @@ int main() {
     if (myfile.is_open()) {
         while (true) {
             std::getline (myfile, num);
-            std::cout << stoi(getnum(num)) << "\n";
             sum += stoi(getnum(num));
 
             if(myfile.eof()) {
