@@ -36,14 +36,14 @@ int answer(std::string& str) {
                     blue = found;
                 }
 
-                if(colour[colour.length() - 1] == ';' && red <= 12 && green <= 13 && blue <= 14) {
+                if(red > 12 || green > 13 || blue > 14) {
+                    check = true;
+                }
+
+                else if(colour[colour.length() - 1] == ';') {
                     red = 0;
                     green = 0;
                     blue = 0;
-                }
-
-                else if(red > 12 || green > 13 || blue > 14) {
-                    check = true;
                 }
             }
         }
